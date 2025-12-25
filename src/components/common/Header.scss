@@ -1,0 +1,41 @@
+// Импортируем общие переменные из папки styles
+// @import - директива SCSS для импорта других файлов
+// Используем относительный путь с подчеркиванием
+@import '../../styles/_variables.scss';
+
+// Стили для Header компонента
+.header {
+  // Используем переменные из общего файла
+  background-color: $primary-color;
+  color: $text-color;
+  padding: $spacing-medium;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // Вложенность - стили для .header-logo внутри .header
+  &-logo {
+    h1 {
+      margin: 0;
+      font-size: $font-size-large;
+    }
+  }
+
+  // Вложенность - стили для .header-nav внутри .header
+  &-nav {
+    display: flex;
+    gap: $spacing-medium;
+
+    span {
+      cursor: pointer;
+      // Используем переменную для transition
+      transition: opacity $transition-fast;
+
+      // Псевдокласс :hover
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+

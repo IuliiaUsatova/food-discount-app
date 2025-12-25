@@ -1,0 +1,88 @@
+// Импортируем общие переменные
+@import '../../styles/_variables.scss';
+
+// Стили для карточки ресторана
+.restaurant-card {
+  // Бордер и тень для карточки
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: $spacing-medium;
+  margin-bottom: $spacing-medium;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  // Эффект при наведении
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  // Изображение ресторана
+  &__image {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: $spacing-medium;
+  }
+
+  // Информация о ресторане
+  &__info {
+    margin-bottom: $spacing-medium;
+  }
+
+  // Название ресторана
+  &__name {
+    margin: 0 0 $spacing-small 0;
+    font-size: $font-size-large;
+    color: $primary-color;
+  }
+
+  // Тип кухни
+  &__cuisine {
+    margin: 0 0 $spacing-small 0;
+    color: #666;
+    font-size: $font-size-medium;
+  }
+
+  // Детали (рейтинг и время работы)
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-size-small;
+    color: #888;
+  }
+
+  // Рейтинг
+  &__rating {
+    // Стили для рейтинга
+  }
+
+  // Время работы
+  &__hours {
+    // Стили для времени работы
+  }
+
+  // Кнопка "Открыть меню"
+  &__button {
+    width: 100%;
+    padding: $spacing-small;
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: $font-size-medium;
+    transition: background-color $transition-fast;
+
+    // Эффект при наведении на кнопку
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    // Эффект при нажатии
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+

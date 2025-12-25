@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 🍔 Еда со скидкой
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fullstack приложение для покупки еды из ресторанов со скидкой в конце рабочего дня.
 
-## Available Scripts
+## 📋 Описание
 
-In the project directory, you can run:
+Приложение позволяет ресторанам продавать остатки еды в конце дня со скидкой, чтобы не выбрасывать продукты. Пользователи могут просматривать рестораны, выбирать блюда и оформлять заказы.
 
-### `npm start`
+## 🛠️ Технологии
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend:
+- React 18
+- SCSS
+- React Router (планируется)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend:
+- Node.js + Express (планируется)
+- MongoDB / PostgreSQL (планируется)
 
-### `npm test`
+## 🚀 Установка и запуск
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Установка зависимостей:
+```bash
+npm install
+```
 
-### `npm run build`
+### Запуск в режиме разработки:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Приложение откроется на [http://localhost:3000](http://localhost:3000)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Сборка для продакшена:
+```bash
+npm run build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Структура проекта
 
-### `npm run eject`
+```
+src/
+├── components/        # React компоненты
+│   ├── common/       # Общие компоненты (Header, Footer)
+│   └── restaurant/   # Компоненты ресторанов
+├── pages/            # Страницы приложения
+├── styles/           # Общие стили и переменные
+│   └── _variables.scss
+└── App.js            # Главный компонент
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🎯 Функционал (в разработке)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Для пользователей:
+- ✅ Просмотр списка ресторанов
+- ⏳ Фильтрация ресторанов
+- ⏳ Просмотр меню ресторана
+- ⏳ Добавление в корзину
+- ⏳ Оформление заказа
+- ⏳ История заказов
+- ⏳ Регистрация и авторизация
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Для ресторанов (админка):
+- ⏳ Панель управления
+- ⏳ Управление меню
+- ⏳ Просмотр заказов
+- ⏳ Статистика
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📝 Планы развития
 
-## Learn More
+- [ ] Добавить роутинг (React Router)
+- [ ] Создать список ресторанов
+- [ ] Реализовать корзину
+- [ ] Создать бэкенд (Node.js + Express)
+- [ ] Подключить базу данных
+- [ ] Реализовать аутентификацию
+- [ ] Добавить админку для ресторанов
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 👨‍💻 Автор
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Проект создан в рамках обучения Fullstack разработке на React и Node.js.
 
-### Code Splitting
+## 📄 Лицензия
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT

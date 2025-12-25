@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+// Импортируем стили для App компонента
 import './App.css';
+// Импортируем компонент Header
+import Header from './components/common/Header';
+// Импортируем компонент RestaurantCard
+import RestaurantCard from './components/restaurant/RestaurantCard';
 
+// Главный компонент приложения
 function App() {
+  // Пока что используем тестовые данные
+  // Позже данные будут приходить из API
+  const testRestaurant = {
+    id: 1,
+    name: 'Итальянский ресторан',
+    cuisine: 'Итальянская',
+    rating: 4.5,
+    workingHours: '10:00 - 22:00',
+    image: '🍝'
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Используем компонент Header */}
+      <Header />
+      
+      {/* Основной контент приложения */}
+      <main>
+        <h1>Еда со скидкой</h1>
+        <p>Приложение для покупки еды из ресторанов со скидкой</p>
+        
+        {/* Используем компонент RestaurantCard */}
+        {/* Передаем данные о ресторане через props */}
+        <RestaurantCard restaurant={testRestaurant} />
+      </main>
     </div>
   );
 }
 
+// Экспортируем компонент, чтобы использовать в index.js
 export default App;
